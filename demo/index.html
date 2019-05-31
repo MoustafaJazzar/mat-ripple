@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Material Ripple</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+
+        <div id="control">
+
+            <div class="row checkbox js__checkbox">
+                <div class="field">
+                    <label for="centered">
+                        <input type="checkbox" name="centered" id="centered">
+                        <div class="input__frame">
+                            <svg xml:space="preserve" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                <path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                            </svg>
+                        </div>
+                        <mat-ripple centered color="#ff408120"></mat-ripple>
+                        <div class="overlay"></div>
+                    </label>
+                    <span>Centered</span>
+                </div>
+
+                <div class="field">
+                    <label for="disabled">
+                        <input type="checkbox" name="disabled" id="disabled">
+                        <div class="input__frame">
+                            <svg xml:space="preserve" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                <path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                            </svg>
+                        </div>
+                        <mat-ripple centered color="#ff408120"></mat-ripple>
+                        <div class="overlay"></div>
+                    </label>
+                    <span>Disabled</span>
+                </div>
+                <div class="field">
+                    <label for="unbounded">
+                        <input type="checkbox" name="unbounded" id="unbounded">
+                        <div class="input__frame">
+                            <svg xml:space="preserve" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                <path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                            </svg>
+                        </div>
+                        <mat-ripple centered color="#ff408120"></mat-ripple>
+                        <div class="overlay"></div>
+                    </label>
+                    <span>Unbounded</span>
+                </div>
+            </div>
+
+            <div class="row underline js__underline">
+                <div class="field">
+                    <label for="color">Color</label>
+                    <input id="color" type='text'></input>
+                </div>
+                <div class="field">
+                    <label for="radius">Radius</label>
+                    <input id="radius" type='number'></input>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="item">Click me</div>
+
+        <script src="./js/MatRipple.umd.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+
+</html>
