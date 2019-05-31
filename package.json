@@ -1,0 +1,38 @@
+{
+  "name": "mat-ripple",
+  "version": "1.0.0",
+  "description": "Material design Ripple effect.",
+  "scripts": {
+    "lint": "tslint -p .",
+    "lint:fix": "tslint -p . --fix",
+    "prebuild": "npm run lint:fix && rimraf dist",
+    "build": "rollup -c"
+  },
+  "types": "dist/types/index.d.ts",
+  "main": "dist/MatRipple.cjs.js",
+  "module": "dist/MatRipple.esm.js",
+  "browser": "dist/MatRipple.umd.js",
+  "files": [
+    "dist",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoustafaJazzar/mat-ripple.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MoustafaJazzar/mat-ripple/issues"
+  },
+  "homepage": "https://github.com/MoustafaJazzar/mat-ripple#readme",
+  "author": "Moustafa Jazzar",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "rollup": "^1.12.3",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {}
+}
