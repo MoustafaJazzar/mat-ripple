@@ -1,6 +1,6 @@
 {
   "name": "mat-ripple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Material design Ripple effect.",
   "scripts": {
     "lint": "tslint -p .",
@@ -26,6 +26,17 @@
   "homepage": "https://github.com/MoustafaJazzar/mat-ripple#readme",
   "author": "Moustafa Jazzar",
   "license": "MIT",
+  "keywords": [
+    "material-design",
+    "material-ui",
+    "material",
+    "ripple",
+    "mat-ripple",
+    "MatRipple",
+    "ripple-effect",
+    "ripple-animation",
+    "custom-elements"
+  ],
   "devDependencies": {
     "rimraf": "^2.6.3",
     "rollup": "^1.12.3",
