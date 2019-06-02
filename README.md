@@ -144,17 +144,17 @@ const globalOptions = {
   */
   animation: {
 
-  /**
-  * Duration in milliseconds for the enter animation (expansion from point of contact).
-  * @default 450
-  */
-  enterDuration: 5000,
+    /**
+    * Duration in milliseconds for the enter animation (expansion from point of contact).
+    * @default 450
+    */
+    enterDuration: 5000,
 
-  /**
-  * Duration in milliseconds for the exit animation (fade-out).
-  * @default 400
-  */
-  exitDuration: 1000
+    /**
+    * Duration in milliseconds for the exit animation (fade-out).
+    * @default 400
+    */
+    exitDuration: 1000
   },
   
   /**
