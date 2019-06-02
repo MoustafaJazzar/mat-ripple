@@ -167,5 +167,8 @@ const globalOptions = {
 
 const ripple = new MatRipple(globalOptions);
 ```
+
+#### Demo
+A simple [demo](https://codepen.io/MoustafaJazzar/pen/WBYpLN) using the `UMD` version.
 #### License
 MIT
