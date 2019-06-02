@@ -180,7 +180,7 @@ launch(x, y, config);
 /**
  * Fades out all currently showing ripple elements. 
  */
-fadeOutAll()
+fadeOutAll();
 ```
 #### Demo
 A simple [demo](https://codepen.io/MoustafaJazzar/pen/WBYpLN) using the `UMD` version.
