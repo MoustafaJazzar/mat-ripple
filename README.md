@@ -130,8 +130,6 @@ Instantiate `MatRipple` using global options.
 // ES6
 import MatRipple from 'mat-ripple';
 
-const myAwesomeBtn = document.getElementById('myAwesomeBtn');
-
 const globalOptions = {
   /**
   * Whether ripples should be disabled. Ripples can be still launched manually by using
