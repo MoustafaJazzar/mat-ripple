@@ -156,6 +156,7 @@ const globalOptions = {
   */
   exitDuration: 1000
   },
+  
   /**
   * Whether ripples should start fading out immediately after the mouse or touch is released. By
   * default, ripples will wait for the enter animation to complete and for mouse or touch release.
