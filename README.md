@@ -167,7 +167,21 @@ const globalOptions = {
 
 const ripple = new MatRipple(globalOptions);
 ```
+#### Methods
+```javascript
+/**
+ * Launches a manual ripple at the specified coordinates within the element.
+ * @param x Coordinate within the element, along the X axis at which to fade-in the ripple.
+ * @param y Coordinate within the element, along the Y axis at which to fade-in the ripple.
+ * @param config Optional ripple configuration for the manual ripple.
+ */
+launch(x, y, config);
 
+/**
+ * Fades out all currently showing ripple elements. 
+ */
+fadeOutAll()
+```
 #### Demo
 A simple [demo](https://codepen.io/MoustafaJazzar/pen/WBYpLN) using the `UMD` version.
 #### License
