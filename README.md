@@ -42,13 +42,13 @@ let ripple = new MatRipple();
 myAwesomeBtn.appendChild(ripple);
 ```
 ### Properties
-| Name | Type | Default | Description
-| ------ | ------ | ------ | ------ | 
-|color|string|`#00000033`|Custom color or any valid `CSS` background property for all ripples.|
-|unbounded| boolean | `false` | Whether the ripples should be visible outside the component's bounds.|
-|disabled| boolean |`false` | Whether click events will not trigger the ripple. Ripples can be still launched manually by using the `launch` method.|
-|centered|boolean | `false`| Whether the ripple always originates from the center of the host element's bounds, rather than originating from the location of the click event.|
-|radius| number | `0` | If set, the radius in pixels of foreground ripples when fully expanded. If unset, the radius will be the distance from the center of the ripple to the furthest corner of the host element's bounding rectangle.|
+| Name    | Type    | Default     | Description |
+| ----    | ----    | -------     | ----------- | 
+|color    | string  | `#00000033` | Custom color or any valid `CSS` background property for all ripples.|
+|unbounded| boolean | `false`     | Whether the ripples should be visible outside the component's bounds.|
+|disabled | boolean | `false`     | Whether click events will not trigger the ripple. Ripples can be still launched manually by using the `launch` method.|
+|centered | boolean | `false`     | Whether the ripple always originates from the center of the host element's bounds, rather than originating from the location of the click event.|
+|radius   |  number | `0`         | If set, the radius in pixels of foreground ripples when fully expanded. If unset, the radius will be the distance from the center of the ripple to the furthest corner of the host element's bounding rectangle.|
 ```html
 <div id="container">
   <button id="myAwesomeBtn">
