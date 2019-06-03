@@ -46,6 +46,13 @@ export function isFakeMousedownFromScreenReader(event: MouseEvent): boolean {
 	return event.buttons === 0;
 }
 
+/** Return style property of a DOM element. */
+export function getStyle(element: HTMLElement, styleProperty?: string): string {
+	return window
+		.getComputedStyle(element)
+		.getPropertyValue(styleProperty || 'opacity');
+}
+
 /** Enforces a style recalculation of a DOM element by computing its styles. */
 export function enforceStyleRecalculation(element: HTMLElement) {
 	/**
@@ -53,7 +60,7 @@ export function enforceStyleRecalculation(element: HTMLElement) {
 	 * Calling `getPropertyValue` is important to let optimizer know that this is not a noop.
 	 * See: `https://gist.github.com/paulirish/5d52fb081b3570c81e3a`
 	 */
-	window.getComputedStyle(element).getPropertyValue('opacity');
+	getStyle(element);
 }
 
 /**

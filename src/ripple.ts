@@ -9,6 +9,8 @@ import {
 
 import { RippleConfig } from './Types';
 
+import { getStyle } from './util';
+
 export class Ripple extends HTMLElement implements RippleTarget {
 	/**
 	 * Return an array containing the names of the attributes to be observed.
@@ -298,5 +300,14 @@ export class Ripple extends HTMLElement implements RippleTarget {
 			this._elementRef,
 			this.shadowRoot
 		);
+
+		/** Parent style */
+		const parentElementPositionStyle: string = getStyle(
+			this.parentElement!,
+			'position'
+		);
+		if (parentElementPositionStyle === 'static') {
+			this.parentElement!.style.position = 'relative';
+		}
 	}
 }
