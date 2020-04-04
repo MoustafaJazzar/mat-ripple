@@ -1,6 +1,6 @@
 {
   "name": "mat-ripple",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Material design Ripple effect.",
   "scripts": {
     "lint": "tslint -p .",
