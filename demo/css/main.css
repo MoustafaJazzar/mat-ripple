@@ -9,10 +9,12 @@
 		0px 4px 5px 0px rgba(0, 0, 0, 0.14),
 		0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
+
 * {
 	box-sizing: border-box;
 	user-select: none;
 }
+
 html,
 body {
 	height: 100%;
@@ -38,6 +40,7 @@ body {
 	border-radius: 4px;
 	display: grid;
 	place-content: center;
+	border: 5px solid transparent;
 }
 
 #control {
@@ -53,6 +56,7 @@ body {
 	gap: 16px;
 	align-content: center;
 }
+
 input {
 	caret-color: var(--primary-color);
 }
@@ -69,12 +73,14 @@ input {
 	pointer-events: none;
 	transition: opacity 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
+
 .checkbox .field {
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
 	grid-template-columns: 50px 1fr;
 }
+
 .checkbox input {
 	display: none;
 }
@@ -88,9 +94,11 @@ input {
 	cursor: pointer;
 	overflow: hidden;
 }
+
 .checkbox label:hover .overlay {
 	opacity: 0.05;
 }
+
 .input__frame {
 	color: var(--border-color);
 	border: 2px solid;
@@ -99,6 +107,7 @@ input {
 	transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
 	position: relative;
 }
+
 .input__frame svg {
 	top: 0;
 	left: 0;
@@ -107,6 +116,7 @@ input {
 	position: absolute;
 	width: 100%;
 }
+
 .input__frame path {
 	stroke-dashoffset: 22.91026;
 	stroke-dasharray: 22.91026;
@@ -114,11 +124,12 @@ input {
 	transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-input:checked ~ .input__frame {
+input:checked~.input__frame {
 	color: var(--accent-color);
 	background: var(--accent-color);
 }
-input:checked ~ .input__frame path {
+
+input:checked~.input__frame path {
 	stroke-dashoffset: 0;
 }
 
@@ -133,9 +144,11 @@ input:checked ~ .input__frame path {
 	width: fit-content;
 	/* transform: ; */
 }
+
 .underline label.filled {
 	transform: translate3d(-10%, 0, 0) scale(0.8);
 }
+
 .underline label.focused {
 	color: var(--primary-color);
 }
@@ -150,6 +163,7 @@ input:checked ~ .input__frame path {
 	width: 100%;
 	padding-bottom: 0.4em;
 }
+
 .underline input:focus {
 	border-color: var(--primary-color);
 }

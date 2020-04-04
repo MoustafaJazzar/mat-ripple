@@ -4,7 +4,7 @@ import { RippleRenderer } from './ripple-renderer';
 import {
 	RippleAnimationConfig,
 	RippleGlobalOptions,
-	RippleTarget
+	RippleTarget,
 } from './Interfaces';
 
 import { RippleConfig } from './Types';
@@ -112,9 +112,9 @@ export class Ripple extends HTMLElement implements RippleTarget {
 			color: this.color,
 			animation: {
 				...this._globalOptions.animation,
-				...this.animation
+				...this.animation,
 			},
-			terminateOnPointerUp: this._globalOptions.terminateOnPointerUp
+			terminateOnPointerUp: this._globalOptions.terminateOnPointerUp,
 		};
 	}
 
@@ -238,12 +238,12 @@ export class Ripple extends HTMLElement implements RippleTarget {
 		if (typeof configOrX === 'number') {
 			return this._rippleRenderer.fadeInRipple(configOrX, y, {
 				...this.rippleConfig,
-				...config
+				...config,
 			});
 		} else {
 			return this._rippleRenderer.fadeInRipple(0, 0, {
 				...this.rippleConfig,
-				...configOrX
+				...configOrX,
 			});
 		}
 	}
@@ -255,21 +255,36 @@ export class Ripple extends HTMLElement implements RippleTarget {
 		}
 	}
 
+	/** Get the parent's borders. */
+	private _getParentBorders() {
+		const top = Number(getStyle(this.parentElement!, 'border-top').charAt(0));
+		const right = Number(
+			getStyle(this.parentElement!, 'border-right').charAt(0)
+		);
+		const bottom = Number(
+			getStyle(this.parentElement!, 'border-bottom').charAt(0)
+		);
+		const left = Number(getStyle(this.parentElement!, 'border-left').charAt(0));
+
+		return { top, right, bottom, left };
+	}
+
 	/**
 	 * Function to creat the `template` for the Ripple and
 	 * attaching the shadow DOM to the root
 	 */
 	private _setup() {
+		const borders = this._getParentBorders();
 		const tmp = document.createElement('template');
 		tmp.innerHTML = `
 			<style>
                 :host{
 					position: absolute !important;
 					border-radius: inherit;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-					right: 0;
+                    top: ${borders.top * -1}px;
+					right: ${borders.right * -1}px;
+                    bottom: ${borders.bottom * -1}px;
+                    left: ${borders.left * -1}px;
 					overflow: hidden;
 					pointer-events: none
                 }
