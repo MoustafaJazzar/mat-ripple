@@ -36,7 +36,7 @@ MatRipple is a `cusomElement`so it can be used directly in the `html` like so `<
 <div id="container">
 	<button id="myAwesomeBtn">
 		Click me
-		<mat-ripple></mat-ripple>
+		<mat-ripple />
 	</button>
 </div>
 ```
@@ -67,13 +67,7 @@ myAwesomeBtn.appendChild(ripple);
 <div id="container">
 	<button id="myAwesomeBtn">
 		Click me
-		<mat-ripple
-			color="#49b3a533"
-			disabled
-			centered
-			unbounded
-			radius="70"
-		></mat-ripple>
+		<mat-ripple color="#49b3a533" disabled centered unbounded radius="70" />
 	</button>
 </div>
 ```
@@ -135,7 +129,7 @@ ripple.animation = {
 	 * Duration in milliseconds for the exit animation (fade-out).
 	 * @default 400
 	 */
-	exitDuration: 1000
+	exitDuration: 1000,
 };
 
 /**
@@ -178,7 +172,7 @@ const globalOptions = {
 		 * Duration in milliseconds for the exit animation (fade-out).
 		 * @default 400
 		 */
-		exitDuration: 1000
+		exitDuration: 1000,
 	},
 
 	/**
@@ -186,7 +180,7 @@ const globalOptions = {
 	 * default, ripples will wait for the enter animation to complete and for mouse or touch release.
 	 * @default  false
 	 */
-	terminateOnPointerUp: false
+	terminateOnPointerUp: false,
 };
 
 const ripple = new MatRipple(globalOptions);
