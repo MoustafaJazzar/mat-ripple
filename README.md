@@ -30,7 +30,7 @@ const MatRipple = require('mat-ripple');
 
 ### Usage
 
-MatRipple is a `cusomElement`so it can be used directly in the `html` like so `<mat-ripple>`
+MatRipple is a `customElement`so it can be used directly in the `html` like so `<mat-ripple>`
 
 ```html
 <div id="container">
