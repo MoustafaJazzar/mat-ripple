@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rollup
+    versions:
+    - 2.45.0
+    - 2.45.1
+    - 2.45.2
+  - dependency-name: rollup-plugin-terser
+    versions:
+    - 7.0.2
+  - dependency-name: tslint
+    versions:
+    - 6.1.3
